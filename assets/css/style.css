@@ -1,0 +1,32 @@
+html,
+body {
+    height: 100%;
+}
+
+#gameBoard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid #FFFF00;
+    padding: 10px;
+}
+
+#colorCode {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100px;
+}
+
+.colorContainer {
+    display: flex;
+    justify-content: center;
+    padding: 2em;
+    background-color: red;
+}
+
+.submitButton {
+    text-align: center;
+    border: #FFFF00;
+}
