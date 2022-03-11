@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", (function () {
         setRandomColor();
         myTimerObj.start();
         setRandomColorWord();
-        checkBoardColor()
       }
     });
   }
@@ -26,9 +25,15 @@ function checkBoardColor() {
 
   let var10 = document.getElementById("colorWord").textContent.toLowerCase();
   let var11 = `background-color: ${var10};`
-  var array1 = [var1, var2, var3, var4, var5, var6, var7, var8, var9, var10, var11];
+  var array1 = [var1, var2, var3, var4, var5, var6, var7, var8, var9, var10];
 
   console.log(array1)
+
+  if (array1.includes(var11)) {
+    alert(`Awwww....`);
+  } else {
+    alert("Hey! You got it right! :D");
+  }
 }
 //timer figured out through stack overflow 
 
