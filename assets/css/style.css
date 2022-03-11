@@ -1,9 +1,134 @@
-
-
-.grid {
-    display: flex;
-    flex-wrap: wrap;
-    height: 400px;
-    width: 400px;
+html,
+body {
+    height: 100%;
 }
 
+#bombTimer {
+    text-align: center;
+    padding-top: 10px;
+}
+
+#colorName {
+    text-align: center;
+    font-size: 1.5rem;
+    color: green;
+}
+
+#nameBox {
+    margin: auto;
+    background-color: lightgrey;
+    width: 150px;
+    border-radius: 10px;
+    border: 1rem solid grey;
+}
+
+#gameBoard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+#backgroundBox {
+    padding: 1.5% 12.5%;
+    background-color: grey;
+    border-radius: 10px;
+}
+
+#colorCode {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100px;
+}
+
+.colorContainer {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    padding: 0.5rem;
+    background-color: grey;
+}
+
+.colorContainer input {
+    height: 5rem;
+    width: 5rem;
+    opacity: 0;
+    z-index: 3;
+}
+
+.checkmark {
+    position: absolute;
+    top: 25%;
+    height: 50px;
+    width: 50px;
+    z-index: 1;
+    border-radius: 10px;
+}
+
+
+#color1:checked~.checkmark {
+    background-color: red;
+}
+
+#color2:checked~.checkmark {
+    background-color: red;
+}
+
+#color3:checked~.checkmark {
+    background-color: blue;
+}
+
+#color4:checked~.checkmark {
+    background-color: blue;
+}
+
+#color5:checked~.checkmark {
+    background-color: red;
+}
+
+#color6:checked~.checkmark {
+    background-color: yellow;
+}
+
+#color7:checked~.checkmark {
+    background-color: red;
+}
+
+#color8:checked~.checkmark {
+    background-color: green;
+}
+
+#color9:checked~.checkmark {
+    background-color: green;
+}
+
+#submitButton {
+    text-align: center;
+    padding: 0.5rem;
+}
+
+#submitButton input {
+    font-size: 2rem;
+}
+
+#startButton {
+    text-align: center;
+    
+}
+
+#startButton input {
+    font-size: 2rem;
+}
+
+/* Image from https://pixabay.com/vectors/bomb-dynamite-clock-countdown-2402460/ */
+
+#timeBombImage {
+    background: url("/assets/images/bomb.webp");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right 30% top 39%;
+    background-size: 80%;
+
+}
