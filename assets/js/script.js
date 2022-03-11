@@ -1,17 +1,39 @@
-document.addEventListener("DOMContentLoaded", (function() {
-    let buttons = document.getElementsByTagName("button");
+document.addEventListener("DOMContentLoaded", (function () {
+  let buttons = document.getElementsByTagName("button");
 
-    for (let button of buttons) {
-        button.addEventListener("click", function() {
-            if (this.getAttribute("data-type") === "submit") {
-                setInterval(timer, 1000);
-            } 
-        });
-    }
+  for (let button of buttons) {
+    button.addEventListener("click", function () {
+      if (this.getAttribute("data-type") === "submit") {
+        setRandomColor();
+        myTimerObj.start();
+        setRandomColorWord();
+        checkBoardColor()
+      }
+    });
+  }
 }));
 
-var myTimerObj = (function(document){
-   
+function checkBoardColor() {
+  let var1 = document.getElementById("color1").style.cssText;
+  let var2 = document.getElementById("color2").style.cssText;
+  let var3 = document.getElementById("color3").style.cssText;
+  let var4 = document.getElementById("color4").style.cssText;
+  let var5 = document.getElementById("color5").style.cssText;
+  let var6 = document.getElementById("color6").style.cssText;
+  let var7 = document.getElementById("color7").style.cssText;
+  let var8 = document.getElementById("color8").style.cssText;
+  let var9 = document.getElementById("color9").style.cssText;
+
+  let var10 = document.getElementById("colorWord").textContent.toLowerCase();
+  let var11 = `background-color: ${var10};`
+  var array1 = [var1, var2, var3, var4, var5, var6, var7, var8, var9, var10, var11];
+
+  console.log(array1)
+}
+//timer figured out through stack overflow 
+
+var myTimerObj = (function (document) {
+
   var myTimer;
 
   function start() {
@@ -22,16 +44,20 @@ var myTimerObj = (function(document){
       document.getElementById("timerContent").innerHTML = --count;
       if (count == 0) {
         clearInterval(myTimer);
-        alert("BOOM!");
+        document.getElementById("colorWord").innerHTML = "BOOM!!!";
+        document.getElementById("colorWord").style = "color: red;"
       }
     }
   }
-  
+
   function end() {
-      clearInterval(myTimer)
+    clearInterval(myTimer)
   }
 
-  return {start:start, end:end};
+  return {
+    start: start,
+    end: end
+  };
 })(document);
 
 function getRandomColor(arr) {
@@ -96,4 +122,21 @@ function changeColorEight() {
 
 function changeColorNine() {
   $("#color9").css("background-color", getRandomColor(colorArray));
+}
+
+function getRandomColorWord(arr) {
+
+  const randomIndex = Math.floor(Math.random() * arr.length);
+
+  const colorWord = arr[randomIndex];
+
+  return colorWord;
+}
+
+var colorWordArray = ['red', 'green', 'blue', 'orange', 'yellow'];
+
+
+function setRandomColorWord() {
+  document.getElementById("colorWord").innerHTML = getRandomColorWord(colorWordArray).toUpperCase();
+  $("#colorWord").css("color", getRandomColor(colorArray));
 }
