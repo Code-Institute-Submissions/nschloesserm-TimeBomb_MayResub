@@ -51,58 +51,12 @@ body {
     background-color: grey;
 }
 
-.colorContainer input {
-    height: 5rem;
-    width: 5rem;
-    opacity: 0;
-    z-index: 3;
-}
-
-.checkmark {
-    position: absolute;
-    top: 25%;
-    height: 50px;
-    width: 50px;
-    z-index: 1;
+.colorBlock {
+    width: 80px;
+    height: 80px;
     border-radius: 10px;
 }
 
-
-#color1:checked~.checkmark {
-    background-color: red;
-}
-
-#color2:checked~.checkmark {
-    background-color: red;
-}
-
-#color3:checked~.checkmark {
-    background-color: blue;
-}
-
-#color4:checked~.checkmark {
-    background-color: blue;
-}
-
-#color5:checked~.checkmark {
-    background-color: red;
-}
-
-#color6:checked~.checkmark {
-    background-color: yellow;
-}
-
-#color7:checked~.checkmark {
-    background-color: red;
-}
-
-#color8:checked~.checkmark {
-    background-color: green;
-}
-
-#color9:checked~.checkmark {
-    background-color: green;
-}
 
 #submitButton {
     text-align: center;
@@ -121,7 +75,29 @@ body {
 #startButton input {
     font-size: 2rem;
 }
+.btn {
+    width: 220px;
+    height: 60px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: white;
+}
 
+.btn:focus {
+    outline: none;
+}
+.btn--gray {
+    margin-top: 25px;
+    background-color: #445361;
+    border: 1px transparent;
+    border-radius: 20px;
+}
+
+.btn--gray:active,
+.btn--gray:hover {
+    background-color: #0d1013;
+}
 /* Image from https://pixabay.com/vectors/bomb-dynamite-clock-countdown-2402460/ */
 
 #timeBombImage {
