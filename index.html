@@ -11,19 +11,19 @@
 
 <body>
     <div id="timeBombImage">
-    <div id="bombTimer">
-        <h1 id="timerContent">10</h1>
-    </div>
-    <div id="colorName">
-        <div id="nameBox">
-            <h2 id="colorWord">RED</h2>
+        <div id="bombTimer">
+            <h1 id="timerContent">5</h1>
         </div>
-    </div>
+        <div id="colorName">
+            <div id="nameBox">
+                <h2 id="colorWord">RED</h2>
+            </div>
+        </div>
         <div id="gameBoard">
             <div id="backgroundBox">
                 <div id="colorCode">
                     <div class="colorContainer">
-                        <button data-type="color1" onclick="changeColorOne()" id="color1" class="colorBlock"></button>   
+                        <button data-type="color1" onclick="changeColorOne()" id="color1" class="colorBlock"></button>
                     </div>
                     <div class="colorContainer">
                         <button data-type="color2" onclick="changeColorTwo()" id="color2" class="colorBlock"></button>
@@ -49,15 +49,54 @@
                     <div class="colorContainer">
                         <button data-type="color9" onclick="changeColorNine()" id="color9" class="colorBlock"></button>
                     </div>
+                    <div class="colorContainer">
+                        <button data-type="color10" onclick="changeColorTen()" id="color10" class="colorBlock"></button>
+                    </div>
+                    <div class="colorContainer">
+                        <button data-type="color11" onclick="changeColorEleven()" id="color11"
+                            class="colorBlock"></button>
+                    </div>
+                    <div class="colorContainer">
+                        <button data-type="color12" onclick="changeColorTwelve()" id="color12"
+                            class="colorBlock"></button>
+                    </div>
+                    <div class="colorContainer">
+                        <button data-type="color13" onclick="changeColorThirteen()" id="color13"
+                            class="colorBlock"></button>
+                    </div>
+                    <div class="colorContainer">
+                        <button data-type="color14" onclick="changeColorFourteen()" id="color14"
+                            class="colorBlock"></button>
+                    </div>
+                    <div class="colorContainer">
+                        <button data-type="color15" onclick="changeColorFifteen()" id="color15"
+                            class="colorBlock"></button>
+                    </div>
+                    <div class="colorContainer">
+                        <button data-type="color16" onclick="changeColorSixteen()" id="color16"
+                            class="colorBlock"></button>
+                    </div>
                 </div>
             </div>
+            <div id="submitButton">
+                <button onclick="myTimerObj.end();checkBoardColor();" class="btn btn--gray">ENTER</button>
+            </div>
         </div>
-        <div id="submitButton">
-            <button onclick="myTimerObj.end();checkBoardColor();" class="btn btn--gray">stop</button>
-        </div>
-        <div id="startButton">
-            <button data-type="submit" id="startGame" class="btn btn--gray">START</button>
-        </div>
+        <img src="/assets/images/explosion.webp" alt="Image of explosion" id="explosionImage">
+        <footer>
+
+            <div id="startButton">
+                <button data-type="submit" id="startGame" class="btnTwo btnTwo--gray">START</button>
+            </div>
+            <div id="winBox">
+                <h3>DEFUSIONS</h3>
+                <h1 id="defuse">0</h1>
+            </div>
+            <div id="loseBox">
+                <h3>EXPLOSIONS</h3>
+                <h1 id="explode">0</h1>
+            </div>
+        </footer>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="assets/js/script.js"></script>

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&display=swap');
+
 html,
 body {
     height: 100%;
@@ -10,9 +12,10 @@ body {
 
 #colorName {
     text-align: center;
-    font-size: 1rem;
+    font-size: 2rem;
+    font-family: 'Cabin Sketch', sans-serif;
     color: green;
-    padding: 20px;
+    padding: 5px;
 }
 
 #nameBox {
@@ -20,7 +23,7 @@ body {
     background-color: lightgrey;
     width: 150px;
     border-radius: 10px;
-    border: 1rem solid grey;
+    border: 1rem solid #445361;
 }
 
 #gameBoard {
@@ -40,7 +43,7 @@ body {
     display: grid;
     align-items: center;
     justify-content: center;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     width: 100px;
 }
 
@@ -53,8 +56,8 @@ body {
 }
 
 .colorBlock {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     border-radius: 10px;
 }
 
@@ -64,21 +67,13 @@ body {
     padding: 0.5rem;
 }
 
-#submitButton input {
-    font-size: 2rem;
-}
 
-#startButton {
-    text-align: center;
-    
-}
-
-#startButton input {
-    font-size: 2rem;
-}
 .btn {
-    width: 220px;
-    height: 60px;
+   position: absolute;
+   bottom: 57.7%;
+   right: 15%;
+    width: 150px;
+    height: 150px;
     font-family: sans-serif;
     text-transform: uppercase;
     letter-spacing: 1.2px;
@@ -88,9 +83,10 @@ body {
 .btn:focus {
     outline: none;
 }
+
 .btn--gray {
     margin-top: 25px;
-    background-color: #445361;
+    background-color: grey;
     border: 1px transparent;
     border-radius: 20px;
 }
@@ -99,7 +95,37 @@ body {
 .btn--gray:hover {
     background-color: #0d1013;
 }
-/* Image from https://pixabay.com/vectors/bomb-dynamite-clock-countdown-2402460/ */
+
+
+#startButton {
+    text-align: center;
+    
+}
+
+.btnTwo {
+    width: 220px;
+    height: 60px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: white;
+}
+
+.btnTwo:focus {
+    outline: none;
+}
+.btnTwo--gray {
+    margin-top: 25px;
+    background-color: #445361;
+    border: 1px transparent;
+    border-radius: 20px;
+}
+
+.btnTwo--gray:active,
+.btnTwo--gray:hover {
+    background-color: #0d1013;
+}
+/* Images from pixabay */
 
 #timeBombImage {
     background: url("/assets/images/bomb.webp");
@@ -108,4 +134,46 @@ body {
     background-position: right 30% top 39%;
     background-size: 80%;
 
+}
+
+#explosionImage {
+    position: absolute;
+    bottom: 310px;
+    left: 230px;
+    width: 50%;
+    visibility: hidden;
+}
+
+#winBox {
+    position: relative;
+    bottom: 150px;
+    left: 150px;
+    float: left;
+    background-color: lightgrey;
+    border-radius: 10px;
+    border: 0.8rem solid #445361;
+    text-align: center;
+    font-family: Helvetica, sans-serif;
+    font-size: 0.9rem;
+}
+
+#loseBox {
+    position: relative;
+    bottom: 150px;
+    right: 150px;
+    float: right;
+    background-color: lightgrey;
+    border-radius: 10px;
+    border: 0.8rem solid #445361;
+    text-align: center; 
+    font-family: Helvetica, sans-serif;
+    font-size: 0.9rem;
+}
+
+#winBox h3, #loseBox h3 {
+    padding: 5px;
+}
+
+#winBox h1, #loseBox h1 {
+    font-size: 2rem;
 }

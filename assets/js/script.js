@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", (function () {
         setRandomColor();
         myTimerObj.start();
         setRandomColorWord();
+        document.getElementById("explosionImage").style.visibility = "hidden";
       }
     });
   }
@@ -22,18 +23,41 @@ function checkBoardColor() {
   let var7 = document.getElementById("color7").style.cssText;
   let var8 = document.getElementById("color8").style.cssText;
   let var9 = document.getElementById("color9").style.cssText;
+  let var10 = document.getElementById("color10").style.cssText;
+  let var11 = document.getElementById("color11").style.cssText;
+  let var12 = document.getElementById("color12").style.cssText;
+  let var13 = document.getElementById("color13").style.cssText;
+  let var14 = document.getElementById("color14").style.cssText;
+  let var15 = document.getElementById("color15").style.cssText;
+  let var16 = document.getElementById("color16").style.cssText;
 
-  let var10 = document.getElementById("colorWord").textContent.toLowerCase();
-  let var11 = `background-color: ${var10};`
-  var array1 = [var1, var2, var3, var4, var5, var6, var7, var8, var9, var10];
+  let var17 = document.getElementById("colorWord").textContent.toLowerCase();
+  let var18 = `background-color: ${var17};`
+  var array1 = [var1, var2, var3, var4, var5, var6, var7, var8, var9, var10, var11, var12, var13, var14, var15, var16];
 
-  console.log(array1)
-
-  if (array1.includes(var11)) {
-    alert(`Awwww....`);
+  if (array1.includes(var18)) {
+    incrementWrongAnswer();
+    document.getElementById("explosionImage").style.visibility = "visible";
+    document.getElementById("colorWord").innerHTML = "BOOM!!!";
+    document.getElementById("colorWord").style = "color: red;";
+    
   } else {
-    alert("Hey! You got it right! :D");
+    incrementScore();
   }
+}
+
+function incrementScore() {
+
+  let oldScore = parseInt(document.getElementById("defuse").innerText);
+  document.getElementById("defuse").innerText = ++oldScore;
+
+}
+
+function incrementWrongAnswer() {
+
+  let oldScore = parseInt(document.getElementById("explode").innerText);
+  document.getElementById("explode").innerText = ++oldScore;
+  
 }
 //timer figured out through stack overflow 
 
@@ -43,14 +67,16 @@ var myTimerObj = (function (document) {
 
   function start() {
     myTimer = setInterval(myClock, 1000);
-    var count = 11;
+    var count = 6;
 
     function myClock() {
       document.getElementById("timerContent").innerHTML = --count;
       if (count == 0) {
         clearInterval(myTimer);
+        incrementWrongAnswer()
         document.getElementById("colorWord").innerHTML = "BOOM!!!";
         document.getElementById("colorWord").style = "color: red;"
+        document.getElementById("explosionImage").style.visibility = "visible";
       }
     }
   }
@@ -87,6 +113,13 @@ function setRandomColor() {
   $("#color7").css("background-color", getRandomColor(colorArray));
   $("#color8").css("background-color", getRandomColor(colorArray));
   $("#color9").css("background-color", getRandomColor(colorArray));
+  $("#color10").css("background-color", getRandomColor(colorArray));
+  $("#color11").css("background-color", getRandomColor(colorArray));
+  $("#color12").css("background-color", getRandomColor(colorArray));
+  $("#color13").css("background-color", getRandomColor(colorArray));
+  $("#color14").css("background-color", getRandomColor(colorArray));
+  $("#color15").css("background-color", getRandomColor(colorArray));
+  $("#color16").css("background-color", getRandomColor(colorArray));
 }
 
 function changeColorOne() {
@@ -127,6 +160,34 @@ function changeColorEight() {
 
 function changeColorNine() {
   $("#color9").css("background-color", getRandomColor(colorArray));
+}
+
+function changeColorTen() {
+  $("#color10").css("background-color", getRandomColor(colorArray));
+}
+
+function changeColorEleven() {
+  $("#color11").css("background-color", getRandomColor(colorArray));
+}
+
+function changeColorTwelve() {
+  $("#color12").css("background-color", getRandomColor(colorArray));
+}
+
+function changeColorThirteen() {
+  $("#color13").css("background-color", getRandomColor(colorArray));
+}
+
+function changeColorFourteen() {
+  $("#color14").css("background-color", getRandomColor(colorArray));
+}
+
+function changeColorFifteen() {
+  $("#color15").css("background-color", getRandomColor(colorArray));
+}
+
+function changeColorSixteen() {
+  $("#color16").css("background-color", getRandomColor(colorArray));
 }
 
 function getRandomColorWord(arr) {
