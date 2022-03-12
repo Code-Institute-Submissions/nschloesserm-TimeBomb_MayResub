@@ -6,10 +6,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Document</title>
+    <title>Time Bomb</title>
 </head>
 
 <body>
+    <div id="titleOfGame">
+        <h1>Time Bomb!!!</h1>
+    </div>
+    <div id="gameInstructions">
+        <ol>
+            <li>
+                Click the start button to begin.
+            </li>
+            <li>
+                Click each of the boxes to any color<br>other than the color named.
+            </li>
+            <li> 
+                Then click ENTER to defuse the bomb!
+            </li>
+        </ol>
+    </div>
     <div id="timeBombImage">
         <div id="bombTimer">
             <h1 id="timerContent">5</h1>
@@ -23,70 +39,70 @@
             <div id="backgroundBox">
                 <div id="colorCode">
                     <div class="colorContainer">
-                        <button data-type="color1" onclick="changeColorOne()" id="color1" class="colorBlock"></button>
+                        <button name="color1" onclick="changeColorOne()" id="color1" class="colorBlock"></button>
                     </div>
                     <div class="colorContainer">
-                        <button data-type="color2" onclick="changeColorTwo()" id="color2" class="colorBlock"></button>
+                        <button name="color2" onclick="changeColorTwo()" id="color2" class="colorBlock"></button>
                     </div>
                     <div class="colorContainer">
-                        <button data-type="color3" onclick="changeColorThree()" id="color3" class="colorBlock"></button>
+                        <button name="color3" onclick="changeColorThree()" id="color3" class="colorBlock"></button>
                     </div>
                     <div class="colorContainer">
-                        <button data-type="color4" onclick="changeColorFour()" id="color4" class="colorBlock"></button>
+                        <button name="color4" onclick="changeColorFour()" id="color4" class="colorBlock"></button>
                     </div>
                     <div class="colorContainer">
-                        <button data-type="color5" onclick="changeColorFive()" id="color5" class="colorBlock"></button>
+                        <button name="color5" onclick="changeColorFive()" id="color5" class="colorBlock"></button>
                     </div>
                     <div class="colorContainer">
-                        <button data-type="color6" onclick="changeColorSix()" id="color6" class="colorBlock"></button>
+                        <button name="color6" onclick="changeColorSix()" id="color6" class="colorBlock"></button>
                     </div>
                     <div class="colorContainer">
-                        <button data-type="color7" onclick="changeColorSeven()" id="color7" class="colorBlock"></button>
+                        <button name="color7" onclick="changeColorSeven()" id="color7" class="colorBlock"></button>
                     </div>
                     <div class="colorContainer">
-                        <button data-type="color8" onclick="changeColorEight()" id="color8" class="colorBlock"></button>
+                        <button name="color8" onclick="changeColorEight()" id="color8" class="colorBlock"></button>
                     </div>
                     <div class="colorContainer">
-                        <button data-type="color9" onclick="changeColorNine()" id="color9" class="colorBlock"></button>
+                        <button name="color9" onclick="changeColorNine()" id="color9" class="colorBlock"></button>
                     </div>
                     <div class="colorContainer">
-                        <button data-type="color10" onclick="changeColorTen()" id="color10" class="colorBlock"></button>
+                        <button name="color10" onclick="changeColorTen()" id="color10" class="colorBlock"></button>
                     </div>
                     <div class="colorContainer">
-                        <button data-type="color11" onclick="changeColorEleven()" id="color11"
+                        <button name="color11" onclick="changeColorEleven()" id="color11"
                             class="colorBlock"></button>
                     </div>
                     <div class="colorContainer">
-                        <button data-type="color12" onclick="changeColorTwelve()" id="color12"
+                        <button name="color12" onclick="changeColorTwelve()" id="color12"
                             class="colorBlock"></button>
                     </div>
                     <div class="colorContainer">
-                        <button data-type="color13" onclick="changeColorThirteen()" id="color13"
+                        <button name="color13" onclick="changeColorThirteen()" id="color13"
                             class="colorBlock"></button>
                     </div>
                     <div class="colorContainer">
-                        <button data-type="color14" onclick="changeColorFourteen()" id="color14"
+                        <button name="color14" onclick="changeColorFourteen()" id="color14"
                             class="colorBlock"></button>
                     </div>
                     <div class="colorContainer">
-                        <button data-type="color15" onclick="changeColorFifteen()" id="color15"
+                        <button name="color15" onclick="changeColorFifteen()" id="color15"
                             class="colorBlock"></button>
                     </div>
                     <div class="colorContainer">
-                        <button data-type="color16" onclick="changeColorSixteen()" id="color16"
+                        <button name="color16" onclick="changeColorSixteen()" id="color16"
                             class="colorBlock"></button>
                     </div>
                 </div>
             </div>
             <div id="submitButton">
-                <button onclick="myTimerObj.end();checkBoardColor();" class="btn btn--gray">ENTER</button>
+                <button name="enter button" onclick="myTimerObj.end();checkBoardColor();" class="btn btn--gray">ENTER</button>
             </div>
         </div>
         <img src="/assets/images/explosion.webp" alt="Image of explosion" id="explosionImage">
         <footer>
 
             <div id="startButton">
-                <button data-type="submit" id="startGame" class="btnTwo btnTwo--gray">START</button>
+                <button data-type="submit" name="submit button" id="startGame" class="btnTwo btnTwo--gray">START</button>
             </div>
             <div id="winBox">
                 <h3>DEFUSIONS</h3>
