@@ -145,7 +145,7 @@ body {
 /* Images from pixabay */
 
 #timeBombImage {
-    background: url("assets/images/bomb.webp");
+    background: url("/TimeBomb/assets/images/bomb.webp");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: right 36% top 170px;
