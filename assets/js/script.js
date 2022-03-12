@@ -32,7 +32,7 @@ function checkBoardColor() {
   let var16 = document.getElementById("color16").style.cssText;
 
   let var17 = document.getElementById("colorWord").textContent.toLowerCase();
-  let var18 = `background-color: ${var17};`
+  let var18 = `background-color: ${var17};`;
   var array1 = [var1, var2, var3, var4, var5, var6, var7, var8, var9, var10, var11, var12, var13, var14, var15, var16];
 
   if (array1.includes(var18)) {
@@ -73,16 +73,16 @@ var myTimerObj = (function (document) {
       document.getElementById("timerContent").innerHTML = --count;
       if (count == 0) {
         clearInterval(myTimer);
-        incrementWrongAnswer()
+        incrementWrongAnswer();
         document.getElementById("colorWord").innerHTML = "BOOM!!!";
-        document.getElementById("colorWord").style = "color: red;"
+        document.getElementById("colorWord").style = "color: red;";
         document.getElementById("explosionImage").style.visibility = "visible";
       }
     }
   }
 
   function end() {
-    clearInterval(myTimer)
+    clearInterval(myTimer);
   }
 
   return {

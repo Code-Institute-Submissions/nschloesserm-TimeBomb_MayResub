@@ -1,108 +1,98 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Time Bomb
 
-Welcome nschloesserm,
+The idea behind the project Time bomb, was to create a game that had three aspects.  The aspect being a puzzle, in which the user clicks on each button generating a random color until none of the button's colors match the named color in the box.  The second aspect was the named color text itself.  The text names one color while its own text color is that of another.  The idea behind this was to create a brain teaser, that would throw off the user and potentially make the game more fun.  The final aspect was the timer, which added urgency for the user to complete the game.  I felt like this is what brought the game together, creating both a frustrating and better experience for the user.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+This game was designed with the intention of continuous user interaction.  The goal was to make it difficult enough to challenge the user, but also easy enough to keep the user engaged. Time Bomb is a fully interactive JavaScript puzzle game built with the intent to inspire continuous play!
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
 
-## Gitpod Reminders
+![Mockup](assets/images/TimeBombFormat.png)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## Features 
 
-`python3 -m http.server`
+### Existing Features
 
-A blue button should appear to click: _Make Public_,
+- __The Time Bomb Heading__
 
-Another blue button should appear to click: _Open Browser_.
+  - Featured at the top left corner of the page, the Time Bomb heading is easy to see for the user. This title implies both the purpose of the game and the drawn font adds to the playfulness of the experience.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+![Logo](assets/images/TimeBombHeading.png)
 
-A blue button should appear to click: _Make Public_,
+- __The Game Area__
 
-Another blue button should appear to click: _Open Browser_.
+  - This section will allow the user to play the TimeBomb Game.  It is clear that the Time Bomb can be activated through the start button and the instructions on the uper right hand corner clear up everything else that is not infered. 
+  - The user will be able to change the color of each button by clicking them and when they click enter the program checks to see that they had changed the proper colors in the alotted time. 
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+![Game](assets/images/TimeBombGameArea.png)
 
-To log into the Heroku toolbelt CLI:
+- __The Named Color, Timer, and Instructions sections__
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+  - These sections provide the context and purpose of the game.
+  - The user will have five seconds to complete the chalenge before the bomb "explodes"
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+![game sections](assets/images/timeBombFunctions.png)
 
-------
+- __The Score Area__
 
-## Release History
+  - This section will allow the user to see exactly how many defusions and explosions they have gotten durring the gameplay. 
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+![score](assets/images/timebombscoring.png)
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+### Features Left to Implement
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+- I would like to create a countdown section for the defusion points that changes the dynamics of the game for every ten defusions.
+- I would also like to make the game more mobile friendly
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+## Testing 
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+- LightHouse
+    - The only major issue was that of accessibility in the naming of buttons, but I am not sure how to resolve that in a game where sight is necessary.
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+![score](assets/images/lighthousetesting.png)
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+### Validator Testing 
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+- HTML
+    - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/#textarea)
+- CSS
+    - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator#css)
+- JavaScript
+    - No errors were found when passing through the official [Jshint validator](https://jshint.com/)
+      - The following metrics were returned: 
+      - There are 30 functions in this file.
+      - Function with the largest signature take 1 arguments, while the median is 0.
+      - Largest function has 25 statements in it, while the median is 1.
+      - The most complex function has a cyclomatic complexity value of 2 while the median is 1.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+### Unfixed Bugs
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+I did have some issues with the JShint validator, because I had to use a jquery library in order to create the set random color function for the buttons.  I am going to do more research on if there is a better way to do this, because I feel as if I overthought and over worked this section.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+## Deployment
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub) 
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+- The site was deployed to GitHub pages. The steps to deploy are as follows: 
+  - In the GitHub repository, navigate to the Settings tab 
+  - From the source section drop-down menu, select the Master Branch
+  - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+The live link can be found here - https://code-institute-org.github.io/love-maths/
 
-------
 
-## FAQ about the uptime script
+## Credits 
 
-**Why have you added this script?**
+In this section you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism. 
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+You can break the credits section up into Content and Media, depending on what you have included in your project. 
 
-**How will this affect me?**
+### Content 
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+- The text for the Home page was taken from Wikipedia Article A
+- Instructions on how to implement form validation on the Sign Up page was taken from [Specific YouTube Tutorial](https://www.youtube.com/)
+- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+### Media
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+- The photos used on the home and sign up page are from This Open Source site
+- The images used for the gallery page were taken from this other open source site
