@@ -70,29 +70,24 @@ I did have some issues with the JShint validator, because I had to use a jquery 
 
 ## Deployment
 
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub) 
-
 - The site was deployed to GitHub pages. The steps to deploy are as follows: 
   - In the GitHub repository, navigate to the Settings tab 
   - From the source section drop-down menu, select the Master Branch
   - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
 
-The live link can be found here - https://code-institute-org.github.io/love-maths/
+The live link can be found here - https://nschloesserm.github.io/TimeBomb/
 
 
 ## Credits 
 
-In this section you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism. 
-
-You can break the credits section up into Content and Media, depending on what you have included in your project. 
 
 ### Content 
 
-- The text for the Home page was taken from Wikipedia Article A
-- Instructions on how to implement form validation on the Sign Up page was taken from [Specific YouTube Tutorial](https://www.youtube.com/)
-- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
+- Instructions on how to implement timer which starts and stops came from this stack overflow forum discusion [StackOverflow](https://stackoverflow.com/questions/40638402/why-wont-my-countdown-timer-start-and-stop)
+- the random color generator was built and borrowed from this stack overflow forum [stackOverflow](https://stackoverflow.com/questions/1484506/random-color-generator)
+- I used the resources from w3 schools for alot of structure and understanding[w3schools](https://www.w3schools.com/)
 
 ### Media
 
-- The photos used on the home and sign up page are from This Open Source site
-- The images used for the gallery page were taken from this other open source site
+- The images for the project came from the open source site pixabay
+
