@@ -334,7 +334,7 @@ html, body {
 #explosionImage img {
     position: relative;
     top: 12rem;
-    left: 53.5%;
+    left: 43%;
     width: 20rem;
 }
 
@@ -366,7 +366,7 @@ html, body {
     font-size: .98rem;
 }
 
-    @media all and (min-width: 768px) and (max-width: 1024px) {
+    @media all and (min-width: 868px) and (max-width: 1124px) {
 
         #mechanism {
             top: 15rem;
@@ -374,7 +374,7 @@ html, body {
         }
     }
     
-    @media all and (min-width: 480px) and (max-width: 768px) { 
+    @media all and (min-width: 580px) and (max-width: 868px) { 
 
         #titleOfGame h1 {
             position: absolute;
@@ -499,7 +499,7 @@ html, body {
         }
     }
     
-    @media all and (max-width: 480px) {
+    @media all and (max-width: 580px) {
         
         #titleOfGame {
             width: 100px;
