@@ -169,13 +169,13 @@ body {
     display: flex;
     position: relative;
     justify-content: center;
-    padding: 0.5rem;
-    top: 0.3rem
+    padding: 0.3rem;
+    
 }
 
 .colorBlockTwo {
-    width: 30px;
-    height: 30px;
+    width: 45px;
+    height: 45px;
     border-radius: 10px;
 }
 
@@ -298,6 +298,10 @@ font-family: 'Cabin Sketch', sans-serif;
     left: 1rem;
     width: 16rem;
     font-family: 'Cabin Sketch', sans-serif;
+}
+
+.playagainbutton {
+    left: 3rem;
 }
 
 #explosionImage {
