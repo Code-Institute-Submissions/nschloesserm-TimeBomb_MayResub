@@ -17,7 +17,7 @@ html, body {
 
 #titleOfGame h1 {
     position: absolute;
-    left: 35%;
+    left: 32%;
 }
 
 
@@ -91,7 +91,7 @@ html, body {
 #mechanism {
     position: absolute;
     top: 15rem;
-    left: 30rem;
+    left: 28rem;
     width: 18rem;
 }
 
