@@ -5,7 +5,7 @@ The idea behind the project Time bomb, was to create a game that had four aspect
 This game was designed with the intention of continuous user interaction.  The goal was to make it difficult enough to challenge the user, but also easy enough to keep the user engaged. Time Bomb is a fully interactive JavaScript puzzle game built with the intent to inspire continuous play!
 
 
-![Mockup](assets/images/TimeBombFormat.png)
+![Mockup](assets/images/porttwoMockup_McKenna.png)
 
 ## Features 
 
@@ -22,20 +22,20 @@ This game was designed with the intention of continuous user interaction.  The g
   - This section will allow the user to play the TimeBomb Game.  It is clear that the Time Bomb can be activated through the start button and the instructions on the uper right hand corner clear up everything else that is not infered. 
   - The user will be able to change the color of each button by clicking them and when they click enter the program checks to see that they had changed the proper colors in the alotted time. 
 
-![Game](assets/images/TimeBombGameArea.png)
+![Game](assets/images/GameAreaTimeBomb.png)
 
 - __The Start and Instructions window__
 
   - These sections provide the context and purpose of the game.
   - The user will have five seconds to complete the chalenge before the bomb "explodes" in the first round and eight in the second.
 
-![game sections](assets/images/timeBombFunctions.png)
+![game sections](assets/images/instructionsArea.png)
 
 - __Level Two__
 
   - This is a more difficult level. The user will now have to defuse a bomb with 25 tiles instead of just sixteen.
 
-![score](assets/images/timebombscoring.png)
+![level two](assets/images/leveltwo.png)
 
 
 ### Features Left to Implement
@@ -48,7 +48,7 @@ This game was designed with the intention of continuous user interaction.  The g
 - LightHouse
     - The only major issue was that of accessibility in the naming of buttons, but I am not sure how to resolve that in a game where sight is necessary.
 
-![score](assets/images/lighthousetesting.png)
+![score](assets/images/testing.png)
 
 ### Validator Testing 
 
