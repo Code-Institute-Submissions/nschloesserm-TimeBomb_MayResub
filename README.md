@@ -24,16 +24,16 @@ This game was designed with the intention of continuous user interaction.  The g
 
 ![Game](assets/images/TimeBombGameArea.png)
 
-- __The Named Color, Timer, and Instructions sections__
+- __The Start and Instructions window__
 
   - These sections provide the context and purpose of the game.
-  - The user will have five seconds to complete the chalenge before the bomb "explodes"
+  - The user will have five seconds to complete the chalenge before the bomb "explodes" in the first round and eight in the second.
 
 ![game sections](assets/images/timeBombFunctions.png)
 
-- __The Score Area__
+- __Level Two__
 
-  - This section will allow the user to see exactly how many defusions and explosions they have gotten durring the gameplay. 
+  - This is a more difficult level. The user will now have to defuse a bomb with 25 tiles instead of just sixteen.
 
 ![score](assets/images/timebombscoring.png)
 
