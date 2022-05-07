@@ -1,45 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Timebomb</title>
-  <link rel="stylesheet" type="text/css" title="stylesheet" href="/assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timebomb</title>
+    <link rel="stylesheet" type="text/css" title="stylesheet" href="/assets/css/style.css">
 </head>
+
 <body>
-  <div id="titleOfGame">
+    <div id="titleOfGame">
         <h1>Time Bomb!!!</h1>
     </div>
-  <div id="bombcontainer">
-    <div id="mechanism">
-        <div id="colorwires" class="gameboxwires"></div>
-        <div id="enterwires" class="gameboxwires"></div>
-        <div id="timerwires" class="gameboxwires"></div>
-    <div id="keypad">
-      <div id="startscreen">
-        <div id="gameInstructions">
-        <ol>
-            <li>
-                Click the start button to begin.
-            </li>
-            <li>
-                This level is much harder so you will get a little more time!
-            </li>
-            <li>
-                Remember to click ENTER to defuse the bomb!
-            </li>
-        </ol>
-    </div>
-        <button data-type="submit" name="submit button" id="startGame" class="buttonstyletwo">START</button>
-      </div>
-      <div id="leveltwoscreen">
-        <div id="leveltwoInstructions">
-        <h2>CONGRATULATIONS YOU WON!!!</h2>
-        <p>Would you like to play again?</p>
-    </div>
-        <a href="index.html" id="levelTwoButton" class="buttonstyletwo playagainbutton">Play Again</a>
-      </div>
-      <div id="colorCodeTwo">
+    <div id="bombcontainer">
+        <div id="mechanism">
+            <div id="colorwires" class="gameboxwires"></div>
+            <div id="enterwires" class="gameboxwires"></div>
+            <div id="timerwires" class="gameboxwires"></div>
+            <div id="keypad">
+                <div id="startscreen">
+                    <div id="gameInstructions">
+                        <ol>
+                            <li>
+                                Click the start button to begin.
+                            </li>
+                            <li>
+                                This level is much harder so you will get a little more time!
+                            </li>
+                            <li>
+                                Remember to click ENTER to defuse the bomb!
+                            </li>
+                        </ol>
+                    </div>
+                    <button data-type="submit" name="submit button" id="startGame" class="buttonstyletwo">START</button>
+                </div>
+                <div id="leveltwoscreen">
+                    <div id="leveltwoInstructions">
+                        <h2>CONGRATULATIONS YOU WON!!!</h2>
+                        <p>Would you like to play again?</p>
+                    </div>
+                    <a href="index.html" id="levelTwoButton" class="buttonstyletwo playagainbutton">Play Again</a>
+                </div>
+                <div id="colorCodeTwo">
                     <div class="colorContainerTwo">
                         <button name="color1" onclick="changeColorOne()" id="color1" class="colorBlockTwo"></button>
                     </div>
@@ -132,36 +134,38 @@
                     </div>
                 </div>
                 <div id="colornamecontainer" class="gameboxes">
-                          <h2 id="colorWord">RED</h2>
+                    <h2 id="colorWord">RED</h2>
                 </div>
                 <div id="entercontainer" class="gameboxes">
-                  <div id="submitbutton">
-                    <button  name="Enter button" onclick="myTimerObj.end();checkBoardColor();" class="buttonstyle">Enter</button>
-                  </div>
+                    <div id="submitbutton">
+                        <button name="Enter button" onclick="myTimerObj.end();checkBoardColor();"
+                            class="buttonstyle">Enter</button>
+                    </div>
                 </div>
                 <div id="timercontainer" class="gameboxes">
-                  <h1 id="timerContent">8</h1>
+                    <h1 id="timerContent">8</h1>
                 </div>
                 <div id="explosionImage">
                     <a href="/index.html" id="restartButton" class="buttonstylerestart">Click to try again!</a>
-                <img src="assets/images/explosion.webp" alt="Image of explosion">
+                    <img src="assets/images/explosion.webp" alt="Image of explosion">
                 </div>
-              </div>
+            </div>
 
-              <div id="fusecontainer">
-              <div id="fuseone"></div>
-              <div id="fusetwo"></div>
-              <div id="fusethree"></div>
+            <div id="fusecontainer">
+                <div id="fuseone"></div>
+                <div id="fusetwo"></div>
+                <div id="fusethree"></div>
             </div>
             <div id="dynamitecontainer">
-              <div class="dynamite"></div>
-              <div class="dynamite"></div>
-              <div class="dynamite"></div>
-              <div class="dynamite"></div>
-              </div>
-              </div>
-              </div>
-              <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-              <script src="assets/js/leveltwoscript.js"></script>
-          </body>
-          </html>
+                <div class="dynamite"></div>
+                <div class="dynamite"></div>
+                <div class="dynamite"></div>
+                <div class="dynamite"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="assets/js/leveltwoscript.js"></script>
+</body>
+
+</html>

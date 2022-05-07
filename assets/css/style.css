@@ -1,102 +1,114 @@
-/*#bombcontainer {
-  transform: rotate(90deg);
-}*/
 @import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&display=swap');
 
-body {
-  background-color: #e3dccf;
+
+html, body {
+    background-color: #e3dccf;
+    height: 100%;
 }
 
 #titleOfGame {
     position: relative;
-    top: 2%;
-    left: 5%;
+    left: 4rem;
+    width: 30rem;
+    margin: 0px;
     font-family: 'Cabin Sketch', sans-serif;
     font-size: 2rem;
 }
 
+#bombcontainer {
+    position: absolute;
+    width: 100%;
+}
+
 #dynamitecontainer {
-  margin: 10% 8%;
-  width: 80rem;
-  height: 18rem;
+    margin: 10% 8%;
+    width: 18rem;
+    height: 18rem;
 }
 
 .dynamite {
-  background-color: #ae2c2c;
-  position: relative;
-  width: 50%;
-  height: 23.5%;
-  top: -8rem;
-  left: -18rem;
-  border-radius: 10px;
-  margin: 0.5%;
+    background-color: #ae2c2c;
+    position: relative;
+    width: 50%;
+    height: 23.5%;
+    top: -8rem;
+    left: -10rem;
+    width: 40rem;;
+    border-radius: 10px;
+    margin: 0.5rem;
 }
 
 #fusecontainer {
-  position: absolute;
-  margin: 2% 10%;
-  width: 89%;
-  height: 18rem;
-  z-index: -1;
+    position: absolute;
+    margin: 2% 10%;
+    width: 20rem;
+    height: 18rem;
+    z-index: 0;
 }
 
 #fuseone {
-  border: 5px solid black;
-  border-right: 0;
-  position: relative;
-  width: 40%;
-  height: 22.5%;
-  left: -20.5rem;
-  border-radius: 10px;
-  margin: 0;;
+    border: 5px solid black;
+    border-right: 0;
+    position: relative;
+    width: 40%;
+    height: 22.5%;
+    top: -4.765em;
+    left: -11rem;
+    border-radius: 10px;
+    margin: 0;
 }
 
 #fusetwo {
-  border: 5px solid black;
-  border-left: 0;
-  position: relative;
-  width: 40%;
-  height: 23.5%;
-  left: -6.5rem;
-  border-radius: 10px;
-  margin: 0;
+    border: 5px solid black;
+    border-left: 0;
+    position: relative;
+    width: 40%;
+    height: 23.5%;
+    top: -4.5rem;
+    left: 23rem;
+    border-radius: 10px;
+    margin: 0;
 }
 
 #fusethree {
-  border: 5px solid black;
-  border-right: 0;
-  position: relative;
-  width: 40%;
-  height: 23.5%;
-  left: -20.5rem;
-  border-radius: 10px;
-  margin: 0;
+    border: 5px solid black;
+    border-right: 0;
+    position: relative;
+    width: 40%;
+    height: 23.5%;
+    top: -4.65rem;
+    left: -11rem;
+    border-radius: 10px;
+    margin: 0;
 }
 
 #mechanism {
-  position: absolute;
-  top: 15rem;
-  left: 40.5%;
+    position: absolute;
+    top: 15rem;
+    left: 30rem;
+    width: 18rem;
 }
 
 #keypad {
-  position: absolute;
-  width: 18rem;
-  height: 17.15rem;
-  background-color: lightgrey;
-  border: 0.5rem solid;
-  border-color: grey darkgrey darkgrey grey;
-  z-index: 3;
+    position: absolute;
+    width: 18rem;
+    height: 17.15rem;
+    top: -6rem;
+    left:3rem;
+    background-color: lightgrey;
+    border: 0.5rem solid;
+    border-color: grey darkgrey darkgrey grey;
+    z-index: 3;
 }
 
 #startscreen {
-  position: absolute;
-  width: 18rem;
-  height: 17.15rem;
-  left: 0rem;
-  background-color: grey;
-  opacity: 0.95;
-  z-index: 3;
+    position: absolute;
+    width: 18rem;
+    height: 17.15rem;
+    left: 0rem;
+    background-color: grey;
+    opacity: 0.95;
+    z-index: 3;
 }
 
 #gameInstructions {
@@ -170,7 +182,7 @@ body {
     position: relative;
     justify-content: center;
     padding: 0.3rem;
-    
+
 }
 
 .colorBlockTwo {
@@ -180,76 +192,76 @@ body {
 }
 
 .gameboxes {
-  position: absolute;
-  background-color: lightgrey;
-  border: 0.5rem solid;
-  border-color: grey darkgrey darkgrey grey;
-  z-index: 3;
+    position: absolute;
+    background-color: lightgrey;
+    border: 0.5rem solid;
+    border-color: grey darkgrey darkgrey grey;
+    z-index: 3;
 }
 
 #colornamecontainer {
-left: -10rem;
-top: 0.6rem;
-height: 5rem;
-width: 8rem;
-text-align: center;
+    left: -10rem;
+    top: 0.6rem;
+    height: 5rem;
+    width: 8rem;
+    text-align: center;
 }
 
 #colorWord {
-  position: relative;
-  font-family: 'Cabin Sketch', sans-serif;
-  font-size: 2rem;
-  top: -0.2rem;
+    position: relative;
+    font-family: 'Cabin Sketch', sans-serif;
+    font-size: 2rem;
+    top: -0.2rem;
 }
 
 #entercontainer {
-top: 7.55rem;
-left: -10rem;
-height: 8rem;
-width: 8rem;
+    top: 7.55rem;
+    left: -10rem;
+    height: 8rem;
+    width: 8rem;
 }
 
 #timercontainer {
-top: -7rem;
-left: 3.5rem;
-height: 5rem;
-width: 10rem;
-text-align: center;
-font-size: 2rem;
-font-family: 'Cabin Sketch', sans-serif;
+    top: -7rem;
+    left: 3.5rem;
+    height: 5rem;
+    width: 10rem;
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Cabin Sketch', sans-serif;
 }
 
 #timerContent {
-  position: relative;
-  top: -2.5rem;
+    position: relative;
+    top: -2.5rem;
 }
 
 .gameboxwires {
-  position: absolute;
-  border: 10px solid black;
-  width: 5rem;
-  z-index: 1;
+    position: absolute;
+    border: 10px solid black;
+    width: 5rem;
+    z-index: 1;
 }
 
 #colorwires {
-  position: absolute;
-  height: 2rem;
-  top: 2.75rem;
-  left: -5rem;
+    position: absolute;
+    height: 2rem;
+    top: -3.25rem;
+    left: -2rem;
 }
 
 #enterwires {
-  position: absolute;
-  height: 4rem;
-  top: 10rem;
-  left: -5rem;
+    position: absolute;
+    height: 4rem;
+    top: 4.25rem;
+    left: -2rem;
 }
 
 #timerwires {
-  position: absolute;
-  height: 3rem;
-  top: -2.75rem;
-  left: 6.4rem;
+    position: absolute;
+    height: 3rem;
+    top: -8.75rem;
+    left: 9.4rem;
 }
 
 .buttonstyle {
@@ -281,14 +293,14 @@ font-family: 'Cabin Sketch', sans-serif;
 }
 
 #leveltwoscreen {
-  visibility: hidden;
-  position: absolute;
-  width: 18rem;
-  height: 17.15rem;
-  left: 0rem;
-  background-color: grey;
-  opacity: 0.95;
-  z-index: 3;
+    visibility: hidden;
+    position: absolute;
+    width: 18rem;
+    height: 17.15rem;
+    left: 0rem;
+    background-color: grey;
+    opacity: 0.95;
+    z-index: 3;
 }
 
 #leveltwoInstructions {
@@ -308,6 +320,8 @@ font-family: 'Cabin Sketch', sans-serif;
     position: absolute;
     top: -13rem;
     left: -11rem;
+    width: 18rem;
+    height: 20rem;
     z-index: 3;
     visibility: hidden;
 }
@@ -339,3 +353,272 @@ font-family: 'Cabin Sketch', sans-serif;
     padding: 38.53px 20px;
     font-size: .98rem;
 }
+
+    @media all and (min-width: 768px) and (max-width: 1024px) {
+
+        #titleOfGame {
+            left: 21.5rem;
+        }
+
+        #mechanism {
+            top: 15rem;
+            left: 20rem;
+        }
+    }
+    
+    @media all and (min-width: 480px) and (max-width: 768px) { 
+
+        #titleOfGame {
+            left: 13.25rem;
+        }
+
+        #dynamitecontainer {
+            width: 22rem;
+            height: 22rem;
+            transform: rotate(90deg);
+          }
+        .dynamite {
+            top: 0;
+            left: -16rem;
+        }
+        #fusecontainer {
+            width: 24rem;
+            height: 22rem;
+            transform: rotate(90deg);
+        }
+        
+        #fuseone {
+            top: 3.75rem;
+            left: -14rem;
+        }
+        
+        #fusetwo {
+            top: 4rem;
+            left: 18.1rem;
+        }
+        
+        #fusethree {
+            top: 4rem;
+            left: -14rem;
+        }
+
+        #mechanism {
+            position: absolute;
+            top: 15rem;
+            left: 12.5rem;
+            width: 18rem;
+        }
+        
+        #keypad {
+            position: absolute;
+            width:24rem;
+            height: 23.15rem;
+            top: -2rem;
+            left: -0.25rem;
+        }
+
+        #startscreen {
+            width: 24rem;
+            height: 23.15rem;
+        }
+        
+        #gameInstructions {
+            width: 22rem;
+            font-size: 1.5rem;
+        }
+        
+        #colorwires {
+            top: 0.75rem;
+            left: -5.25rem;
+        }
+        
+        #enterwires {
+            position: absolute;
+            height: 4rem;
+            top: 8.25rem;
+            left: -5.35rem;
+        }
+
+        #timerwires {
+            position: absolute;
+            height: 3rem;
+            top: -4.75rem;
+            left: 9.15rem;
+        }
+        
+        #timercontainer {
+            left: 6.5rem;
+        }
+
+        .buttonstyletwo {
+            left: 7.5rem;
+            top: 16.5rem;
+        }
+
+        #explosionImage {
+            top: -10rem;
+            left: -8rem;
+        }
+
+        .buttonstylerestart {
+            left: 17rem;
+        }
+        
+        .colorContainer {
+            top: 0.7rem
+        }
+        
+        .colorBlock {
+            width: 70px;
+            height: 70px;
+        }
+
+        #leveltwoscreen {
+            width: 24rem;
+            height: 23.15rem;
+        }
+
+        #leveltwoInstructions {
+            top: 2rem;
+            left: 3rem;
+            width: 18rem;
+        }
+
+        .playagainbutton {
+            left: 6rem;
+        }
+        
+        .colorBlockTwo {
+            width: 65px;
+            height: 64.5px;
+        }
+    }
+    
+    @media all and (max-width: 480px) {
+     #titleOfGame {
+            text-align: center;
+            left: 13.25rem;
+            width: 20rem;
+        }
+
+        #dynamitecontainer {
+            width: 22rem;
+            height: 22rem;
+            transform: rotate(90deg);
+          }
+        .dynamite {
+            top: 2rem;
+            left: -10rem;
+        }
+        #fusecontainer {
+            width: 24rem;
+            height: 22rem;
+            transform: rotate(90deg);
+        }
+        
+        #fuseone {
+            top: 5.75rem;
+            left: -8rem;
+        }
+        
+        #fusetwo {
+            top: 6rem;
+            left: 24.1rem;
+        }
+        
+        #fusethree {
+            top: 6rem;
+            left: -8rem;
+        }
+
+        #mechanism {
+            position: absolute;
+            top: 15rem;
+            left: 12.5rem;
+            width: 18rem;
+        }
+        
+        #keypad {
+            position: absolute;
+            width:24rem;
+            height: 23.15rem;
+            top: 0;
+            left: -2rem;
+        }
+
+        #startscreen {
+            width: 24rem;
+            height: 23.15rem;
+        }
+        
+        #gameInstructions {
+            width: 22rem;
+            font-size: 1.5rem;
+        }
+        
+        #colorwires {
+            top: 2.5rem;
+            left: -5.25rem;
+        }
+        
+        #enterwires {
+            position: absolute;
+            height: 4rem;
+            top: 10rem;
+            left: -5.35rem;
+        }
+
+        #timerwires {
+            position: absolute;
+            height: 3rem;
+            top: -2.75rem;
+            left: 7.4rem;
+        }
+        
+        #timercontainer {
+            left: 6.5rem;
+        }
+
+        .buttonstyletwo {
+            left: 7.5rem;
+            top: 16.5rem;
+        }
+
+        #explosionImage {
+            top: -10rem;
+            left: -8rem;
+        }
+
+        .buttonstylerestart {
+            left: 17rem;
+        }
+        
+        .colorContainer {
+            top: 0.7rem
+        }
+        
+        .colorBlock {
+            width: 70px;
+            height: 70px;
+        }
+
+        #leveltwoscreen {
+            width: 24rem;
+            height: 23.15rem;
+        }
+
+        #leveltwoInstructions {
+            top: 2rem;
+            left: 3rem;
+            width: 18rem;
+        }
+
+        .playagainbutton {
+            left: 6rem;
+        }
+        
+        .colorBlockTwo {
+            width: 65px;
+            height: 64.5px;
+        }
+    }

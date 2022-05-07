@@ -1,19 +1,19 @@
 document.addEventListener("DOMContentLoaded", (function () {
     let buttons = document.getElementsByTagName("button");
-  
+
     for (let button of buttons) {
-      button.addEventListener("click", function () {
-        if (this.getAttribute("data-type") === "submit") {
-          setRandomColor();
-          myTimerObj.start();
-          setRandomColorWord();
-          document.getElementById("startscreen").style.visibility = "hidden";
-        }
-      });
+        button.addEventListener("click", function () {
+            if (this.getAttribute("data-type") === "submit") {
+                setRandomColor();
+                myTimerObj.start();
+                setRandomColorWord();
+                document.getElementById("startscreen").style.visibility = "hidden";
+            }
+        });
     }
-  }));
-  
-  function checkBoardColor() {
+}));
+
+function checkBoardColor() {
     let var1 = document.getElementById("color1").style.cssText;
     let var2 = document.getElementById("color2").style.cssText;
     let var3 = document.getElementById("color3").style.cssText;
@@ -39,76 +39,76 @@ document.addEventListener("DOMContentLoaded", (function () {
     let var23 = document.getElementById("color23").style.cssText;
     let var24 = document.getElementById("color24").style.cssText;
     let var25 = document.getElementById("color25").style.cssText;
-  
-  
+
+
     let var26 = document.getElementById("colorWord").textContent.toLowerCase();
     let var27 = `background-color: ${var26};`;
     var array1 = [var1, var2, var3, var4, var5, var6, var7, var8, var9, var10, var11, var12, var13, var14, var15, var16, var17, var18, var19, var20, var21, var22, var23, var24, var25];
-  
+
     if (array1.includes(var27)) {
-      wrongAnswer();
+        wrongAnswer();
     } else if (document.getElementById("colorWord").innerHTML.includes("BOOM!!!")) {
-      wrongAnswer();
+        wrongAnswer();
     } else if (document.getElementById("timerContent").innerHTML.includes("8")) {
-      document.getElementById("startscreen").style.visibility = "visible";
+        document.getElementById("startscreen").style.visibility = "visible";
     } else {
-      correctAnswer();
+        correctAnswer();
     }
-  }
-  
-  function correctAnswer() {
+}
+
+function correctAnswer() {
     document.getElementById("leveltwoscreen").style.visibility = "visible";
-  
-  }
-  
-  function wrongAnswer() {
+
+}
+
+function wrongAnswer() {
     document.getElementById("colorWord").innerHTML = "BOOM!!!";
     document.getElementById("colorWord").style = "color: red;";
     document.getElementById("explosionImage").style.visibility = "visible";
-  
-  }
-  //timer figured out through stack overflow
-  
-  var myTimerObj = (function (document) {
-  
+
+}
+//timer figured out through stack overflow
+
+var myTimerObj = (function (document) {
+
     var myTimer;
-  
+
     function start() {
-      myTimer = setInterval(myClock, 1000);
-      var count = 9;
-  
-      function myClock() {
-        document.getElementById("timerContent").innerHTML = --count;
-        if (count == 0) {
-          clearInterval(myTimer);
-          wrongAnswer();
+        myTimer = setInterval(myClock, 1000);
+        var count = 9;
+
+        function myClock() {
+            document.getElementById("timerContent").innerHTML = --count;
+            if (count == 0) {
+                clearInterval(myTimer);
+                wrongAnswer();
+            }
         }
-      }
     }
-  
+
     function end() {
-      clearInterval(myTimer);
+        clearInterval(myTimer);
     }
-  
+
     return {
-      start: start,
-      end: end
+        start: start,
+        end: end
     };
-  })(document);
-  
-  function getRandomColor(arr) {
-  
+})(document);
+
+function getRandomColor(arr) {
+
     const randomIndex = Math.floor(Math.random() * arr.length);
-  
+
     const color = arr[randomIndex];
-  
+
     return color;
-  }
-  
-  var colorArray = ['red', 'green', 'blue', 'orange', 'yellow'];
-  
-  
-  function setRandomColor() {
+}
+
+var colorArray = ['red', 'green', 'blue', 'orange', 'yellow'];
+
+
+function setRandomColor() {
     $("#color1").css("background-color", getRandomColor(colorArray));
     $("#color2").css("background-color", getRandomColor(colorArray));
     $("#color3").css("background-color", getRandomColor(colorArray));
@@ -134,126 +134,125 @@ document.addEventListener("DOMContentLoaded", (function () {
     $("#color23").css("background-color", getRandomColor(colorArray));
     $("#color24").css("background-color", getRandomColor(colorArray));
     $("#color25").css("background-color", getRandomColor(colorArray));
-  }
-  
-  function changeColorOne() {
+}
+
+function changeColorOne() {
     $("#color1").css("background-color", getRandomColor(colorArray));
-  }
-  
-  function changeColorOne() {
+}
+
+function changeColorOne() {
     $("#color1").css("background-color", getRandomColor(colorArray));
-  }
-  
-  function changeColorTwo() {
+}
+
+function changeColorTwo() {
     $("#color2").css("background-color", getRandomColor(colorArray));
-  }
-  
-  function changeColorThree() {
+}
+
+function changeColorThree() {
     $("#color3").css("background-color", getRandomColor(colorArray));
-  }
-  
-  function changeColorFour() {
+}
+
+function changeColorFour() {
     $("#color4").css("background-color", getRandomColor(colorArray));
-  }
-  
-  function changeColorFive() {
+}
+
+function changeColorFive() {
     $("#color5").css("background-color", getRandomColor(colorArray));
-  }
-  
-  function changeColorSix() {
+}
+
+function changeColorSix() {
     $("#color6").css("background-color", getRandomColor(colorArray));
-  }
-  
-  function changeColorSeven() {
+}
+
+function changeColorSeven() {
     $("#color7").css("background-color", getRandomColor(colorArray));
-  }
-  
-  function changeColorEight() {
+}
+
+function changeColorEight() {
     $("#color8").css("background-color", getRandomColor(colorArray));
-  }
-  
-  function changeColorNine() {
+}
+
+function changeColorNine() {
     $("#color9").css("background-color", getRandomColor(colorArray));
-  }
-  
-  function changeColorTen() {
+}
+
+function changeColorTen() {
     $("#color10").css("background-color", getRandomColor(colorArray));
-  }
-  
-  function changeColorEleven() {
+}
+
+function changeColorEleven() {
     $("#color11").css("background-color", getRandomColor(colorArray));
-  }
-  
-  function changeColorTwelve() {
+}
+
+function changeColorTwelve() {
     $("#color12").css("background-color", getRandomColor(colorArray));
-  }
-  
-  function changeColorThirteen() {
+}
+
+function changeColorThirteen() {
     $("#color13").css("background-color", getRandomColor(colorArray));
-  }
-  
-  function changeColorFourteen() {
+}
+
+function changeColorFourteen() {
     $("#color14").css("background-color", getRandomColor(colorArray));
-  }
-  
-  function changeColorFifteen() {
+}
+
+function changeColorFifteen() {
     $("#color15").css("background-color", getRandomColor(colorArray));
-  }
-  
-  function changeColorSixteen() {
+}
+
+function changeColorSixteen() {
     $("#color16").css("background-color", getRandomColor(colorArray));
-  }
+}
 
-  function changeColorSeventeen() {
+function changeColorSeventeen() {
     $("#color17").css("background-color", getRandomColor(colorArray));
-  }
+}
 
-  function changeColorEighteen() {
+function changeColorEighteen() {
     $("#color18").css("background-color", getRandomColor(colorArray));
-  }
+}
 
-  function changeColorNineteen() {
+function changeColorNineteen() {
     $("#color19").css("background-color", getRandomColor(colorArray));
-  }
+}
 
-  function changeColorTwenty() {
+function changeColorTwenty() {
     $("#color20").css("background-color", getRandomColor(colorArray));
-  }
+}
 
-  function changeColorTwentyone() {
+function changeColorTwentyone() {
     $("#color21").css("background-color", getRandomColor(colorArray));
-  }
+}
 
-  function changeColorTwentytwo() {
+function changeColorTwentytwo() {
     $("#color22").css("background-color", getRandomColor(colorArray));
-  }
+}
 
-  function changeColorTwentythree() {
+function changeColorTwentythree() {
     $("#color23").css("background-color", getRandomColor(colorArray));
-  }
+}
 
-  function changeColorTwentyfour() {
+function changeColorTwentyfour() {
     $("#color24").css("background-color", getRandomColor(colorArray));
-  }
+}
 
-  function changeColorTwentyfive() {
+function changeColorTwentyfive() {
     $("#color25").css("background-color", getRandomColor(colorArray));
-  }
-  
-  function getRandomColorWord(arr) {
-  
+}
+
+function getRandomColorWord(arr) {
+
     const randomIndex = Math.floor(Math.random() * arr.length);
-  
+
     const colorWord = arr[randomIndex];
-  
+
     return colorWord;
-  }
-  
-  var colorWordArray = ['red', 'green', 'blue', 'orange', 'yellow'];
-  
-  
-  function setRandomColorWord() {
+}
+
+var colorWordArray = ['red', 'green', 'blue', 'orange', 'yellow'];
+
+
+function setRandomColorWord() {
     document.getElementById("colorWord").innerHTML = getRandomColorWord(colorWordArray).toUpperCase();
     $("#colorWord").css("color", getRandomColor(colorArray));
-  }
-  
+}
