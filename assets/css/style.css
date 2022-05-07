@@ -333,9 +333,9 @@ html, body {
 }
 #explosionImage img {
     position: relative;
-    top: 0;
-    left: -2rem;
-    width: 40rem;
+    top: 12rem;
+    left: 53.5%;
+    width: 20rem;
 }
 
 .buttonstylerestart {
