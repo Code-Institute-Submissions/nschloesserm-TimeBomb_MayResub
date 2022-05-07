@@ -367,7 +367,6 @@ html, body {
     }
     
     @media all and (min-width: 480px) and (max-width: 768px) { 
-
         #titleOfGame {
             left: 13.25rem;
         }
@@ -495,6 +494,9 @@ html, body {
     }
     
     @media all and (max-width: 480px) {
+        body{
+            width: 480px;
+        }
      #titleOfGame {
             text-align: center;
             left: 13.25rem;
