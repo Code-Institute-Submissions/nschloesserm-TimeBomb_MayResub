@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", (function () {
         setRandomColor();
         myTimerObj.start();
         setRandomColorWord();
-        document.getElementById("explosionImage").style.visibility = "hidden";
+        document.getElementById("startscreen").style.visibility = "hidden";
       }
     });
   }
@@ -31,35 +31,34 @@ function checkBoardColor() {
   let var15 = document.getElementById("color15").style.cssText;
   let var16 = document.getElementById("color16").style.cssText;
 
+
   let var17 = document.getElementById("colorWord").textContent.toLowerCase();
   let var18 = `background-color: ${var17};`;
   var array1 = [var1, var2, var3, var4, var5, var6, var7, var8, var9, var10, var11, var12, var13, var14, var15, var16];
 
   if (array1.includes(var18)) {
-    incrementWrongAnswer();
-    document.getElementById("explosionImage").style.visibility = "visible";
-    document.getElementById("colorWord").innerHTML = "BOOM!!!";
-    document.getElementById("colorWord").style = "color: red;";
-    
+    wrongAnswer();
+  } else if (document.getElementById("colorWord").innerHTML.includes("BOOM!!!")) {
+    wrongAnswer();
+  } else if (document.getElementById("timerContent").innerHTML.includes("5")) {
+    document.getElementById("startscreen").style.visibility = "visible";
   } else {
-    incrementScore();
+    correctAnswer();
   }
 }
 
-function incrementScore() {
-
-  let oldScore = parseInt(document.getElementById("defuse").innerText);
-  document.getElementById("defuse").innerText = ++oldScore;
+function correctAnswer() {
+  document.getElementById("leveltwoscreen").style.visibility = "visible";
 
 }
 
-function incrementWrongAnswer() {
+function wrongAnswer() {
+  document.getElementById("colorWord").innerHTML = "BOOM!!!";
+  document.getElementById("colorWord").style = "color: red;";
+  document.getElementById("explosionImage").style.visibility = "visible";
 
-  let oldScore = parseInt(document.getElementById("explode").innerText);
-  document.getElementById("explode").innerText = ++oldScore;
-  
 }
-//timer figured out through stack overflow 
+//timer figured out through stack overflow
 
 var myTimerObj = (function (document) {
 
@@ -73,10 +72,7 @@ var myTimerObj = (function (document) {
       document.getElementById("timerContent").innerHTML = --count;
       if (count == 0) {
         clearInterval(myTimer);
-        incrementWrongAnswer();
-        document.getElementById("colorWord").innerHTML = "BOOM!!!";
-        document.getElementById("colorWord").style = "color: red;";
-        document.getElementById("explosionImage").style.visibility = "visible";
+        wrongAnswer();
       }
     }
   }

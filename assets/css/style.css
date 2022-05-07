@@ -1,57 +1,138 @@
+/*#bombcontainer {
+  transform: rotate(90deg);
+}*/
 @import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&display=swap');
 
-html,
 body {
-    height: 100%;
+  background-color: #e3dccf;
 }
 
 #titleOfGame {
-    position: absolute;
+    position: relative;
     top: 2%;
     left: 5%;
     font-family: 'Cabin Sketch', sans-serif;
     font-size: 2rem;
 }
 
+#dynamitecontainer {
+  margin: 10% 8%;
+  width: 80rem;
+  height: 18rem;
+}
+
+.dynamite {
+  background-color: #ae2c2c;
+  position: relative;
+  width: 50%;
+  height: 23.5%;
+  top: -8rem;
+  left: -18rem;
+  border-radius: 10px;
+  margin: 0.5%;
+}
+
+#fusecontainer {
+  position: absolute;
+  margin: 2% 10%;
+  width: 89%;
+  height: 18rem;
+  z-index: -1;
+}
+
+#fuseone {
+  border: 5px solid black;
+  border-right: 0;
+  position: relative;
+  width: 40%;
+  height: 22.5%;
+  left: -20.5rem;
+  border-radius: 10px;
+  margin: 0;;
+}
+
+#fusetwo {
+  border: 5px solid black;
+  border-left: 0;
+  position: relative;
+  width: 40%;
+  height: 23.5%;
+  left: -6.5rem;
+  border-radius: 10px;
+  margin: 0;
+}
+
+#fusethree {
+  border: 5px solid black;
+  border-right: 0;
+  position: relative;
+  width: 40%;
+  height: 23.5%;
+  left: -20.5rem;
+  border-radius: 10px;
+  margin: 0;
+}
+
+#mechanism {
+  position: absolute;
+  top: 15rem;
+  left: 40.5%;
+}
+
+#keypad {
+  position: absolute;
+  width: 18rem;
+  height: 17.15rem;
+  background-color: lightgrey;
+  border: 0.5rem solid;
+  border-color: grey darkgrey darkgrey grey;
+  z-index: 3;
+}
+
+#startscreen {
+  position: absolute;
+  width: 18rem;
+  height: 17.15rem;
+  left: 0rem;
+  background-color: grey;
+  opacity: 0.95;
+  z-index: 3;
+}
+
 #gameInstructions {
     position: absolute;
-    top: 8%;
-    right: 5%;
+    text-align: justify;
+    top: 1rem;
+    width: 16rem;
     font-family: 'Cabin Sketch', sans-serif;
 }
 
-#bombTimer {
+.buttonstyletwo {
     text-align: center;
-    font-family: 'Cabin Sketch', sans-serif;
-    padding-top: 10px;
-}
-
-#colorName {
-    text-align: center;
-    font-size: 1.6rem;
-    font-family: 'Cabin Sketch', sans-serif;
-    color: green;
-}
-
-#nameBox {
-    margin: auto;
+    cursor: pointer;
+    outline: none;
+    color: black;
     background-color: lightgrey;
-    width: 150px;
-    border-radius: 10px;
-    border: 1rem solid #445361;
+    border: 0.1rem solid;
+    border-color: grey darkgrey darkgrey grey;
+    border-radius: 1px;
+    padding: 15px 20px;
+    left: 4.5rem;
+    top: 11.5rem;
+    position: absolute;
+    text-decoration: none;
+    font-family: 'Cabin Sketch', sans-serif;
+    font-size: 2rem;
+    z-index: 3;
 }
 
-#gameBoard {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-}
-
-#backgroundBox {
-    padding: 1.5% 12.5%;
-    background-color: grey;
-    border-radius: 10px;
+.buttonstyletwo:active {
+    border-bottom: 0.2rem solid darkgrey;
+    border-top: 0.1rem solid grey;
+    border-left: 0.15rem solid grey;
+    border-right: 0.1rem solid darkgrey;
+    padding: 14.53px 20px;
+    font-size: 1.98rem;
 }
 
 #colorCode {
@@ -59,7 +140,6 @@ body {
     align-items: center;
     justify-content: center;
     grid-template-columns: repeat(4, 1fr);
-    width: 100px;
 }
 
 .colorContainer {
@@ -67,271 +147,191 @@ body {
     position: relative;
     justify-content: center;
     padding: 0.5rem;
-    background-color: grey;
+    top: 0.3rem
 }
 
 .colorBlock {
-    width: 60px;
-    height: 60px;
+    background-color: lightgrey;
+    width: 50px;
+    height: 50px;
     border-radius: 10px;
 }
 
+#colorCodeTwo {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(5, 1fr);
+    z-index: 3;
+}
 
-#submitButton {
-    text-align: center;
+.colorContainerTwo {
+    display: flex;
+    position: relative;
+    justify-content: center;
     padding: 0.5rem;
+    top: 0.3rem
 }
 
-
-.btn {
-    position: absolute;
-    bottom: 47.7%;
-    right: 20%;
-    width: 150px;
-    height: 150px;
-    font-family: 'Cabin Sketch', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-    color: white;
+.colorBlockTwo {
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
 }
 
-.btn:focus {
-    outline: none;
+.gameboxes {
+  position: absolute;
+  background-color: lightgrey;
+  border: 0.5rem solid;
+  border-color: grey darkgrey darkgrey grey;
+  z-index: 3;
 }
 
-.btn--gray {
-    margin-top: 25px;
-    background-color: grey;
-    border: 1px transparent;
-    border-radius: 20px;
+#colornamecontainer {
+left: -10rem;
+top: 0.6rem;
+height: 5rem;
+width: 8rem;
+text-align: center;
 }
 
-.btn--gray:active,
-.btn--gray:hover {
-    background-color: #0d1013;
+#colorWord {
+  position: relative;
+  font-family: 'Cabin Sketch', sans-serif;
+  font-size: 2rem;
+  top: -0.2rem;
 }
 
+#entercontainer {
+top: 7.55rem;
+left: -10rem;
+height: 8rem;
+width: 8rem;
+}
 
-#startButton {
+#timercontainer {
+top: -7rem;
+left: 3.5rem;
+height: 5rem;
+width: 10rem;
+text-align: center;
+font-size: 2rem;
+font-family: 'Cabin Sketch', sans-serif;
+}
+
+#timerContent {
+  position: relative;
+  top: -2.5rem;
+}
+
+.gameboxwires {
+  position: absolute;
+  border: 10px solid black;
+  width: 5rem;
+  z-index: 1;
+}
+
+#colorwires {
+  position: absolute;
+  height: 2rem;
+  top: 2.75rem;
+  left: -5rem;
+}
+
+#enterwires {
+  position: absolute;
+  height: 4rem;
+  top: 10rem;
+  left: -5rem;
+}
+
+#timerwires {
+  position: absolute;
+  height: 3rem;
+  top: -2.75rem;
+  left: 6.4rem;
+}
+
+.buttonstyle {
     text-align: center;
-
-}
-
-.btnTwo {
-    width: 220px;
-    height: 60px;
-    font-family: 'Cabin Sketch', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-    color: white;
-}
-
-.btnTwo:focus {
+    cursor: pointer;
     outline: none;
+    color: black;
+    background-color: lightgrey;
+    border: 0.1rem solid;
+    border-color: grey darkgrey darkgrey grey;
+    border-radius: 1px;
+    padding: 39px 20px;
+    left: 5px;
+    top: 5px;
+    position: absolute;
+    text-decoration: none;
+    font-family: 'Cabin Sketch', sans-serif;
+    font-size: 2rem;
+    z-index: 3;
 }
 
-.btnTwo--gray {
-    margin-top: 50px;
-    background-color: #445361;
-    border: 1px transparent;
-    border-radius: 20px;
+.buttonstyle:active {
+    border-bottom: 0.2rem solid darkgrey;
+    border-top: 0.1rem solid grey;
+    border-left: 0.15rem solid grey;
+    border-right: 0.1rem solid darkgrey;
+    padding: 38.53px 20px;
+    font-size: 1.98rem;
 }
 
-.btnTwo--gray:active,
-.btnTwo--gray:hover {
-    background-color: #0d1013;
+#leveltwoscreen {
+  visibility: hidden;
+  position: absolute;
+  width: 18rem;
+  height: 17.15rem;
+  left: 0rem;
+  background-color: grey;
+  opacity: 0.95;
+  z-index: 3;
 }
 
-/* Images from pixabay */
-
-#timeBombImage {
-    background: url("/assets/images/bomb.webp");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: right 36% top 170px;
-    background-size: 1050px;
-
+#leveltwoInstructions {
+    position: absolute;
+    text-align: center;
+    top: 1rem;
+    left: 1rem;
+    width: 16rem;
+    font-family: 'Cabin Sketch', sans-serif;
 }
 
 #explosionImage {
     position: absolute;
-    bottom: 110px;
-    left: 420px;
-    width: 40%;
+    top: -13rem;
+    left: -11rem;
+    z-index: 3;
     visibility: hidden;
 }
 
-#winBox {
-    position: relative;
-    bottom: 150px;
-    left: 150px;
-    float: left;
-    background-color: lightgrey;
-    border-radius: 10px;
-    border: 0.8rem solid #445361;
+.buttonstylerestart {
     text-align: center;
-    font-family: Helvetica, sans-serif;
-    font-size: 0.9rem;
-}
-
-#loseBox {
-    position: relative;
-    bottom: 150px;
-    right: 150px;
-    float: right;
+    cursor: pointer;
+    outline: none;
+    color: black;
     background-color: lightgrey;
-    border-radius: 10px;
-    border: 0.8rem solid #445361;
-    text-align: center;
-    font-family: Helvetica, sans-serif;
-    font-size: 0.9rem;
+    border: 0.1rem solid;
+    border-color: grey darkgrey darkgrey grey;
+    border-radius: 1px;
+    padding: 39px 20px;
+    left: 15rem;
+    top: 18rem;
+    position: absolute;
+    text-decoration: none;
+    font-family: 'Cabin Sketch', sans-serif;
+    font-size: 1rem;
+    z-index: 3;
 }
 
-#winBox h3,
-#loseBox h3 {
-    padding: 5px;
-}
-
-#winBox h1,
-#loseBox h1 {
-    font-size: 2rem;
-}
-
-@media screen and (max-width: 1300px) {
-    #titleOfGame {
-        top: 0;
-        left: 3%;
-    }
-
-    #gameInstructions {
-        top: 5%;
-        right: 5%;
-    }
-
-    #timeBombImage {
-        background-position: right 25% top 190px;
-        background-size: 950px;
-
-    }
-
-    #explosionImage {
-        bottom: 110px;
-        left: 340px;
-        width: 40%;
-
-    }
-
-    .btn {
-        bottom: 47.7%;
-        right: 15%;
-        width: 130px;
-        height: 130px;
-    }
-}
-
-@media screen and (max-width: 1024px) {
-    .colorBlock {
-        width: 50px;
-        height: 50px;
-    }
-
-    #gameInstructions {
-        top: 5%;
-        right: 5%;
-    }
-
-    #timeBombImage {
-        background-position: right 35% top 217px;
-        background-size: 750px;
-    }
-
-    #explosionImage {
-        top: 100px;
-        left: 300px;
-        width: 40%;
-    }
-}
-
-@media screen and (max-width: 690px) {
-    .colorBlock {
-        width: 30px;
-        height: 30px;
-    }
-
-    #backgroundBox {
-        padding: 1.5% 9.5%;
-    }
-
-    #titleOfGame {
-        top: 0;
-        left: 3%;
-        font-size: 1rem;
-    }
-
-    #gameInstructions {
-        top: 0;
-        right: 3%;
-        font-size: 0.7rem;
-    }
-
-    #timeBombImage {
-        background-position: right 17% top 80px;
-        background-size: 550px;
-
-    }
-
-    #explosionImage {
-        bottom: 110px;
-        left: 340px;
-        width: 40%;
-
-    }
-
-    .btn {
-        top: 22.7%;
-        right: 15%;
-        width: 100px;
-        height: 100px;
-    }
-
-    .btnTwo {
-        position: absolute;
-        bottom: 10px;
-        left: 40%;
-        width: 120px;
-        height: 30px;
-    }
-
-    #nameBox {
-        position: absolute;
-        top: 1%;
-        left: 33%;
-        width: 100px;
-    }
-
-    #colorName {
-        font-size: 1rem;
-    }
-
-    #bombTimer {
-        margin-left: 130px;
-    }
-
-    #winBox {
-        position: absolute;
-        bottom: 10px;
-        left: 10px;
-    }
-
-    #loseBox {
-        position: absolute;
-        bottom: 10px;
-        right: 10px;
-    }
-
-    #explosionImage {
-        bottom: 70px;
-        left: 190px;
-        width: 40%;
-    }
+.buttonstylerestart:active {
+    border-bottom: 0.2rem solid darkgrey;
+    border-top: 0.1rem solid grey;
+    border-left: 0.15rem solid grey;
+    border-right: 0.1rem solid darkgrey;
+    padding: 38.53px 20px;
+    font-size: .98rem;
 }

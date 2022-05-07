@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timebomb</title>
+  <link rel="stylesheet" type="text/css" title="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <div id="titleOfGame">
+        <h1>Time Bomb!!!</h1>
+    </div>
+  <div id="bombcontainer">
+    <div id="mechanism">
+        <div id="colorwires" class="gameboxwires"></div>
+        <div id="enterwires" class="gameboxwires"></div>
+        <div id="timerwires" class="gameboxwires"></div>
+    <div id="keypad">
+      <div id="startscreen">
+        <div id="gameInstructions">
+        <ol>
+            <li>
+                Click the start button to begin.
+            </li>
+            <li>
+                This level is much harder so you will get a little more time!
+            </li>
+            <li>
+                Remember to click ENTER to defuse the bomb!
+            </li>
+        </ol>
+    </div>
+        <button data-type="submit" name="submit button" id="startGame" class="buttonstyletwo">START</button>
+      </div>
+      <div id="leveltwoscreen">
+        <div id="leveltwoInstructions">
+        <h2>CONGRATULATIONS!!!</h2>
+        <p>Click the button below to play level two!</p>
+    </div>
+        <a href="/leveltwo.html" id="levelTwoButton" class="buttonstyletwo">Level 2</a>
+      </div>
+      <div id="colorCodeTwo">
+                    <div class="colorContainerTwo">
+                        <button name="color1" onclick="changeColorOne()" id="color1" class="colorBlockTwo"></button>
+                    </div>
+                    <div class="colorContainerTwo">
+                        <button name="color2" onclick="changeColorTwo()" id="color2" class="colorBlockTwo"></button>
+                    </div>
+                    <div class="colorContainerTwo">
+                        <button name="color3" onclick="changeColorThree()" id="color3" class="colorBlockTwo"></button>
+                    </div>
+                    <div class="colorContainerTwo">
+                        <button name="color4" onclick="changeColorFour()" id="color4" class="colorBlockTwo"></button>
+                    </div>
+                    <div class="colorContainerTwo">
+                        <button name="color5" onclick="changeColorFive()" id="color5" class="colorBlockTwo"></button>
+                    </div>
+                    <div class="colorContainerTwo">
+                        <button name="color6" onclick="changeColorSix()" id="color6" class="colorBlockTwo"></button>
+                    </div>
+                    <div class="colorContainerTwo">
+                        <button name="color7" onclick="changeColorSeven()" id="color7" class="colorBlockTwo"></button>
+                    </div>
+                    <div class="colorContainerTwo">
+                        <button name="color8" onclick="changeColorEight()" id="color8" class="colorBlockTwo"></button>
+                    </div>
+                    <div class="colorContainerTwo">
+                        <button name="color9" onclick="changeColorNine()" id="color9" class="colorBlockTwo"></button>
+                    </div>
+                    <div class="colorContainerTwo">
+                        <button name="color10" onclick="changeColorTen()" id="color10" class="colorBlockTwo"></button>
+                    </div>
+                    <div class="colorContainerTwo">
+                        <button name="color11" onclick="changeColorEleven()" id="color11"
+                            class="colorBlockTwo"></button>
+                    </div>
+                    <div class="colorContainerTwo">
+                        <button name="color12" onclick="changeColorTwelve()" id="color12"
+                            class="colorBlockTwo"></button>
+                    </div>
+                    <div class="colorContainerTwo">
+                        <button name="color13" onclick="changeColorThirteen()" id="color13"
+                            class="colorBlockTwo"></button>
+                    </div>
+                    <div class="colorContainerTwo">
+                        <button name="color14" onclick="changeColorFourteen()" id="color14"
+                            class="colorBlockTwo"></button>
+                    </div>
+                    <div class="colorContainerTwo">
+                        <button name="color15" onclick="changeColorFifteen()" id="color15"
+                            class="colorBlockTwo"></button>
+                    </div>
+                    <div class="colorContainerTwo">
+                        <button name="color16" onclick="changeColorSixteen()" id="color16"
+                            class="colorBlockTwo"></button>
+                    </div>
+                    <div class="colorContainerTwo">
+                        <button name="color17" onclick="changeColorSeventeen()" id="color17"
+                            class="colorBlockTwo"></button>
+                    </div>
+                    <div class="colorContainerTwo">
+                        <button name="color18" onclick="changeColoreighteen()" id="color18"
+                            class="colorBlockTwo"></button>
+                    </div>
+                    <div class="colorContainerTwo">
+                        <button name="color19" onclick="changeColorNineteen()" id="color19"
+                            class="colorBlockTwo"></button>
+                    </div>
+                    <div class="colorContainerTwo">
+                        <button name="color20" onclick="changeColorTwenty()" id="color20"
+                            class="colorBlockTwo"></button>
+                    </div>
+                    <div class="colorContainerTwo">
+                        <button name="color21" onclick="changeColorTwentyone()" id="color21"
+                            class="colorBlockTwo"></button>
+                    </div>
+                    <div class="colorContainerTwo">
+                        <button name="color22" onclick="changeColorTwentytwo()" id="color22"
+                            class="colorBlockTwo"></button>
+                    </div>
+                    <div class="colorContainerTwo">
+                        <button name="color23" onclick="changeColorTwentythree()" id="color23"
+                            class="colorBlockTwo"></button>
+                    </div>
+                    <div class="colorContainerTwo">
+                        <button name="color24" onclick="changeColorTwentyfour()" id="color24"
+                            class="colorBlockTwo"></button>
+                    </div>
+                    <div class="colorContainerTwo">
+                        <button name="color25" onclick="changeColorTwentyfive()" id="color25"
+                            class="colorBlockTwo"></button>
+                    </div>
+                </div>
+                <div id="colornamecontainer" class="gameboxes">
+                          <h2 id="colorWord">RED</h2>
+                </div>
+                <div id="entercontainer" class="gameboxes">
+                  <div id="submitbutton">
+                    <button  name="Enter button" onclick="myTimerObj.end();checkBoardColor();" class="buttonstyle">Enter</button>
+                  </div>
+                </div>
+                <div id="timercontainer" class="gameboxes">
+                  <h1 id="timerContent">5</h1>
+                </div>
+                <div id="explosionImage">
+                    <a href="/index.html" id="restartButton" class="buttonstylerestart">Click to try again!</a>
+                <img src="assets/images/explosion.webp" alt="Image of explosion">
+                </div>
+              </div>
+
+              <div id="fusecontainer">
+              <div id="fuseone"></div>
+              <div id="fusetwo"></div>
+              <div id="fusethree"></div>
+            </div>
+            <div id="dynamitecontainer">
+              <div class="dynamite"></div>
+              <div class="dynamite"></div>
+              <div class="dynamite"></div>
+              <div class="dynamite"></div>
+              </div>
+              </div>
+              </div>
+              <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+              <script src="assets/js/script.js"></script>
+          </body>
+          </html>

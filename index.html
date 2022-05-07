@@ -1,43 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>Time Bomb</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timebomb</title>
+  <link rel="stylesheet" type="text/css" title="stylesheet" href="/assets/css/style.css">
 </head>
-
 <body>
-    <div id="titleOfGame">
+  <div id="titleOfGame">
         <h1>Time Bomb!!!</h1>
     </div>
-    <div id="gameInstructions">
+  <div id="bombcontainer">
+    <div id="mechanism">
+        <div id="colorwires" class="gameboxwires"></div>
+        <div id="enterwires" class="gameboxwires"></div>
+        <div id="timerwires" class="gameboxwires"></div>
+    <div id="keypad">
+      <div id="startscreen">
+        <div id="gameInstructions">
         <ol>
             <li>
                 Click the start button to begin.
             </li>
             <li>
-                Click each of the boxes to any color<br>other than the color named.
+                Click on the boxes to to change them to any color other than the color named.
             </li>
-            <li> 
+            <li>
                 Then click ENTER to defuse the bomb!
             </li>
         </ol>
     </div>
-    <div id="timeBombImage">
-        <div id="bombTimer">
-            <h1 id="timerContent">5</h1>
-        </div>
-        <div id="colorName">
-            <div id="nameBox">
-                <h2 id="colorWord">RED</h2>
-            </div>
-        </div>
-        <div id="gameBoard">
-            <div id="backgroundBox">
-                <div id="colorCode">
+        <button data-type="submit" name="submit button" id="startGame" class="buttonstyletwo">START</button>
+      </div>
+      <div id="leveltwoscreen">
+        <div id="leveltwoInstructions">
+        <h2>CONGRATULATIONS!!!</h2>
+        <p>Click the button below to play level two!</p>
+    </div>
+        <a href="/leveltwo.html" id="levelTwoButton" class="buttonstyletwo">Level 2</a>
+      </div>
+      <div id="colorCode">
                     <div class="colorContainer">
                         <button name="color1" onclick="changeColorOne()" id="color1" class="colorBlock"></button>
                     </div>
@@ -93,29 +95,38 @@
                             class="colorBlock"></button>
                     </div>
                 </div>
-            </div>
-            <div id="submitButton">
-                <button name="enter button" onclick="myTimerObj.end();checkBoardColor();" class="btn btn--gray">ENTER</button>
-            </div>
-        </div>
-        <img src="assets/images/explosion.webp" alt="Image of explosion" id="explosionImage">
-        <footer>
 
-            <div id="startButton">
-                <button data-type="submit" name="submit button" id="startGame" class="btnTwo btnTwo--gray">START</button>
-            </div>
-            <div id="winBox">
-                <h3>DEFUSIONS</h3>
-                <h1 id="defuse">0</h1>
-            </div>
-            <div id="loseBox">
-                <h3>EXPLOSIONS</h3>
-                <h1 id="explode">0</h1>
-            </div>
-        </footer>
+      <div id="colornamecontainer" class="gameboxes">
+                <h2 id="colorWord">RED</h2>
+      </div>
+      <div id="entercontainer" class="gameboxes">
+        <div id="submitbutton">
+          <button  name="Enter button" onclick="myTimerObj.end();checkBoardColor();" class="buttonstyle">Enter</button>
+        </div>
+      </div>
+      <div id="timercontainer" class="gameboxes">
+        <h1 id="timerContent">5</h1>
+      </div>
+      <div id="explosionImage">
+          <a href="/index.html" id="restartButton" class="buttonstylerestart">Click to try again!</a>
+      <img src="assets/images/explosion.webp" alt="Image of explosion">
+      </div>
+    </div>
+
+    <div id="fusecontainer">
+    <div id="fuseone"></div>
+    <div id="fusetwo"></div>
+    <div id="fusethree"></div>
+  </div>
+  <div id="dynamitecontainer">
+    <div class="dynamite"></div>
+    <div class="dynamite"></div>
+    <div class="dynamite"></div>
+    <div class="dynamite"></div>
+    </div>
+    </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
-
 </html>
